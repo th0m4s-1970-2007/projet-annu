@@ -33,10 +33,10 @@ def index():
         pcs = PCPortable.query.filter(
             PCPortable.prix <= prix,
             PCPortable.taille_ecran == taille_ecran,
-            PCPortable.carte_graphique == carte_graphique,
-            PCPortable.ram == ram,
-            PCPortable.stockage == stockage,
-            PCPortable.processeur == processeur
+            PCPortable.carte_graphique >= carte_graphique,
+            PCPortable.ram >= ram,
+            PCPortable.stockage >= stockage,
+            PCPortable.processeur >= processeur
         ).all()
 
         return render_template('results.html', pcs=pcs)

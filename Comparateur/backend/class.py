@@ -7,12 +7,20 @@ class PCPortable:
         self.stockage = stockage
         self.processeur = processeur
 
-class ASUS(PCPortable):
+
+
+
+class MSI(PCPortable):
     def __init__(self, prix, taille_ecran, carte_graphique, ram, stockage, processeur, nom_modele):
-        super().__init__(prix, taille_ecran, carte_graphique, ram, stockage, processeur)
-        self.nom_modele = nom_modele
+        super().__init__(3000, 16, NVIDIA RTX™ A2000 8 go GDDR6, 32 go, 1000 go, i7)
+        self.nom_modele = MSI_test
+
+
+
 
 class HP(PCPortable):
-    def __init__(self, prix, taille_ecran, carte_graphique, ram, stockage, processeur, autonomie_batterie):
-        super().__init__(prix, taille_ecran, carte_graphique, ram, stockage, processeur)
-        self.autonomie_batterie = autonomie_batterie
+    def __init__(self, prix, taille_ecran, carte_graphique, ram, stockage, processeur, nom_modele):
+        super().__init__(1200, 17, rtx3070 8 go, 6 go, 1000 go, i5, nom_modele)
+        self.nom_modele = HP_test
+
+
